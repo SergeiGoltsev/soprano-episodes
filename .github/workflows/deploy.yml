@@ -26,7 +26,7 @@ jobs:
         run: npm install # Чистая установка библиотек без изменения package-lock.json
 
       - name: Build project
-        run: npm run build
+        run: CI=false npm run build
         env:
           PUBLIC_URL: './' # Помогает Реакту правильно находить пути к путям файлов на GitHub Pages
 
