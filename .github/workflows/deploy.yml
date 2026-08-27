@@ -23,7 +23,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci # Чистая установка библиотек без изменения package-lock.json
+        run: npm install # Чистая установка библиотек без изменения package-lock.json
 
       - name: Build project
         run: npm run build
