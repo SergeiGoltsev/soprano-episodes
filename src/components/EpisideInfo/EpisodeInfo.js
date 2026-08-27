@@ -15,7 +15,7 @@ class EpisodeInfo extends Component {
         error: false,
     }
 
-    sopranoService = new SopranoService;
+    sopranoService = new SopranoService();
 
     componentDidMount() {
        this.updateEpisode();

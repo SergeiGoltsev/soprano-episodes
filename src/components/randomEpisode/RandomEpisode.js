@@ -5,10 +5,6 @@ import Spinner from "../spinner/Spinner";
 import "./randomEpisode.css"
 
 class RandomEpisode extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     state = {
         episode: {},
         loading: true,

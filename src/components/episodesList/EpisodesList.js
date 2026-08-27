@@ -19,7 +19,7 @@ class EpisodesList extends Component {
         itemsEnding: false,
     }
 
-    sopranoService = new SopranoService;
+    sopranoService = new SopranoService();
 
     componentDidMount() {
         this.uploadEpisodes();

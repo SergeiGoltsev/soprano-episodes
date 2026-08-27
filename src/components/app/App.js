@@ -7,9 +7,6 @@ import logo from './sopranos-logo.webp'
 import './app.css'
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
         selectedEpisode: null
@@ -20,7 +17,6 @@ class App extends Component {
             selectedEpisode: id,
         })
     }
-
 
     render() {
         return (
@@ -39,7 +35,6 @@ class App extends Component {
             </div>
         )
     }
-
 }
 
 export default App;
