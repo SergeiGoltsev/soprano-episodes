@@ -7,7 +7,6 @@ import logo from './sopranos-logo.webp'
 import './app.css'
 
 class App extends Component {
-
     state = {
         selectedEpisode: null
     }

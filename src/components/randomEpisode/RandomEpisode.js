@@ -25,7 +25,6 @@ class RandomEpisode extends Component {
             .getEpisodes(id)
             .then(this.loadedEpisode)
             .catch(this.errorEpisode)
-
     }
 
     loadedEpisode = (episode) => {
@@ -43,7 +42,7 @@ class RandomEpisode extends Component {
 
     render() {
         const {episode, loading, error}  =this.state;
-        const content = episode ? <View episode={episode} /> : null;
+        const content = (!loading && !error && episode.name) ? <View episode={episode}/> : null;
         const spinner = loading ? <Spinner /> : null;
         const errorMessage = error ? <ErrorMessage /> : null;
         return (

@@ -5,17 +5,13 @@ import Spinner from "../spinner/Spinner";
 import "./EpisodeInfo.css"
 
 class EpisodeInfo extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     state = {
         episode: null,
         loading: false,
         error: false,
     }
 
-    sopranoService = new SopranoService();
+    sopranoService = new SopranoService;
 
     componentDidMount() {
        this.updateEpisode();
@@ -39,7 +35,6 @@ class EpisodeInfo extends Component {
             .catch(this.errorEpisode)
     }
 
-
     loadedEpisode = (episode) => {
         this.setState({
             episode,
@@ -58,7 +53,6 @@ class EpisodeInfo extends Component {
             error: true
         })
     }
-
 
     render() {
         const {episode, loading, error} = this.state;

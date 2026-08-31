@@ -19,7 +19,7 @@ class EpisodesList extends Component {
         itemsEnding: false,
     }
 
-    sopranoService = new SopranoService();
+    sopranoService = new SopranoService;
 
     componentDidMount() {
         this.uploadEpisodes();
@@ -49,7 +49,6 @@ class EpisodesList extends Component {
         })
     }
 
-
     loadingEpisodes = () => {
         this.setState({
             newItemLoading: true,
@@ -75,13 +74,14 @@ class EpisodesList extends Component {
             this.myRef[id].classList.add('episodes-list__item_active');
             this.myRef[id].focus();
         }
-
     }
 
     renderItems = (arr) => {
         const items = arr.map(item => {
             return (
                 <li className='episodes-list__item'
+                    key={item.id}
+                    tabIndex="0"
                     ref={(elem) => this.setEpisodeItemRef(elem, item.id) }
                     onClick={() => {
                         this.episodeItemSelected(item.id);
@@ -120,7 +120,5 @@ class EpisodesList extends Component {
         )
     }
 }
-
-
 
 export default EpisodesList;
